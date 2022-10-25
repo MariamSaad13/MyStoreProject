@@ -25,3 +25,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Comments
+This projects consists of 3 main components {header, products, cart}:
+  -- Header is responsible for rendering the nav bar to the user to enable navigation between "ProductList" view and "Cart" view.
+
+  -- Products is responsible for rendering a list of products for the user to add to their carts and their prices.
+  Note that: In this app, the user can click on add to cart several times to add more items (increase the quantity).
+
+  -- Cart is responsible for rendering the list of cart items that the user has chosen and to view the final sum.
+
+
+  This project consists of 2 services {api ,cart}:
+   --  api has the http get request to reneder products from fake api store.
+
+   -- cart has all the functions required for the cart view inlcuding (add to cart, remove item from cart, emptycart).
+   I acknowledge using this video for expalnation:
+   https://www.youtube.com/watch?v=855KrFfF9-w
+

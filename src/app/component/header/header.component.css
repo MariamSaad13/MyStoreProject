@@ -1,0 +1,30 @@
+.formstyle{
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 47%;
+    top:21px;
+    color:blue;
+}
+.pushRight{
+    margin-left:700px;
+}
+.removeBullet{
+    list-style-type: none;
+    margin-top: 10px;
+    
+}
+.dostyle{
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    width:100px;
+    flex-wrap: wrap;
+}
+.pro{
+    margin-left: 670px;
+}
