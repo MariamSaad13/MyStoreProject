@@ -26,6 +26,12 @@ export class CartComponent implements OnInit {
   emptyCart(){
     this.cartService.removeAllCart();
   }
+  emptyCartSuccess()
+  {
+    this.cartService.removeAllCart();
+    window.prompt("Thanks! This transaction is successful!");
+  }
+
 
 
 }
