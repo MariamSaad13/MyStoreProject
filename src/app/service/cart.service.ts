@@ -28,7 +28,7 @@ export class CartService {
   getTotalPrice(): number{
     let finalSum=0;
     this.cartItemList.map((a:any)=>{
-       finalSum +=a.total;
+       finalSum +=a.total*a.selectedOption;
     })
     return finalSum;
   }

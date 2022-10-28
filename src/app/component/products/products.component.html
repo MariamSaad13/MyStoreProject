@@ -1,20 +1,25 @@
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productList">
+        <ng-container *ngFor="let item of productList;">
             <div class="card col-md-3">
            <img src="{{item.image}}" alt="">      
-           <a routerLink="/product-detail" (click)="productDetail(item)">   <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5> </a>
-                <select id="quantity" style="width: 70px;">
-                    <option value="1">1</option>
+            
+           <a routerLink="/product-detail"  (click)="productDetail(item)" > <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5> </a>
+           
+                    <select [(ngModel)]="item.selectedOption"  name="first" style="width: 70px;" >
                     
-                    </select>
-                   <script> 
-                   var select = document.querySelector("#quantity");
-                   quantity=select.value;
-                </script>
+                        <option *ngFor="let o of options">
+                           {{o.name}}
+                        </option>
+
+                     </select>
+            <app-quan [quantityQ]='item.selectedOption'> </app-quan> 
                     <p><strong>Price:</strong>${{item.price}}</p>  
-                <button class="btn btn-primary" (click)=addtoCart(item,quantity)> Add to cart</button>
-              </div>
+
+                    
+                    
+                <button class="btn btn-primary" (click)="addtoCart(item,quantity,$event); "> Add to cart</button>
+              </div> 
         </ng-container>
        
     </div>

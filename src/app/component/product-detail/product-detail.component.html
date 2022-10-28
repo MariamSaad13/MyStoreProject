@@ -3,10 +3,7 @@
         <div class="card col-md-3" >
             <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.title}}</h5>
         <img src="{{product.image}}" alt="">
-        <select id="quantity" style="width: 70px;">
-            <option value="1">1</option>
-            
-            </select>
+       <p>Selected quanity: {{product.selectedOption}}</p>
             <p>{{product.description}}</p>
         <p><strong>Price:</strong>${{product.price}}</p> 
         </div>
